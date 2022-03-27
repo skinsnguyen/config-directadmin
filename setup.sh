@@ -255,7 +255,7 @@ esac
 				LID=0
 			fi
 			if [ "${IP}" = "" ]; then
-				IP=`wget -q -O - http://myip.directadmin.com`
+				IP=`wget -q -O - https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/myip.php`
 			fi
 		fi
 	else
@@ -900,7 +900,7 @@ fi
 if [ $CMD_LINE -eq 0 ]; then
 
 	echo -n "Your external IP: ";
-	wget -q -O - http://myip.directadmin.com
+	wget -q -O - https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/myip.php
 	echo "";
 	echo "The external IP should typically match your license IP.";
 	echo "";
