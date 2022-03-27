@@ -81,7 +81,7 @@ myip()
 }
 
 #$WGET_PATH $WGET_OPTION ${HTTP}://www.directadmin.com/cgi-bin/licenseupdate?lid=${2}\&uid=${1}${EXTRA_VALUE} -O ${LICENSE} ${BIND_ADDRESS}
-gunzip /root/license.key.gz && cp /root/license.key /usr/local/directadmin/conf/ && chmod 600 /usr/local/directadmin/conf/license.key && chown diradmin:diradmin /usr/local/directadmin/conf/license.key
+gunzip /var/caidirectadmin/license.key.gz && cp /var/caidirectadmin/license.key /usr/local/directadmin/conf/ && chmod 600 /usr/local/directadmin/conf/license.key && chown diradmin:diradmin /usr/local/directadmin/conf/license.key
 
 if [ $? -ne 0 ]
 then
