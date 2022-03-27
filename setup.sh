@@ -1847,8 +1847,8 @@ if ${DOWNLOAD_BETA}; then
 else
 	APPEND_BETA=""
 fi
-cp /root/update.tar.gz $DA_PATH/update.tar.gz
-#$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}://update.directadmin.com/cgi-bin/daupdate?uid=$CID&lid=$LID${EXTRA_VALUE}&redirect=ok${APPEND_BETA}"
+
+$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/update.tar.gz"
 
 if [ ! -e $DA_PATH/update.tar.gz ]; then
 	echo "Unable to download $DA_PATH/update.tar.gz";
