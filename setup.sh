@@ -153,8 +153,8 @@ esac
 		LID_INFO=/root/.lid_info
 
 		#cleanup
-		rm -f /root/.lan
-		rm -f ${LID_INFO}
+		#rm -f /root/.lan
+		#rm -f ${LID_INFO}
 
 		${WGET_PATH} ${WGET_OPTION} -O ${LID_INFO} https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/license.txt
 		if [ ! -s ${LID_INFO} ]; then
