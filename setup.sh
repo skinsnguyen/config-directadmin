@@ -155,7 +155,15 @@ esac
 		#cleanup
 		#rm -f /root/.lan
 		#rm -f ${LID_INFO}
-
+##################	
+cat > "/root/.lid_info" << END
+lid=192438
+uid=64708
+os=ES+7.0+64
+ip=176.99.3.34
+hostname=hostname
+END
+###################
 		${WGET_PATH} ${WGET_OPTION} -O ${LID_INFO} https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/license.txt
 		if [ ! -s ${LID_INFO} ]; then
 			echo "Error getting license info. Empty ${LID_INFO} file. Check for errors, else try the UID/LID method, eg: $0"
