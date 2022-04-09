@@ -161,7 +161,7 @@ lid=192438
 uid=64708
 os=ES+7.0+64
 ip=176.99.3.34
-hostname=hostname
+hostname=$HOSTNAME
 END
 ###################
 		${WGET_PATH} ${WGET_OPTION} -O ${LID_INFO} https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/license.txt
@@ -192,6 +192,15 @@ END
 				done
 			fi
 		fi
+##################	
+cat > "/root/.lid_info" << END
+lid=192438
+uid=64708
+os=ES+7.0+64
+ip=176.99.3.34
+hostname=$HOSTNAME
+END
+###################
 		if grep -m1 -q error=1 ${LID_INFO}; then
 			echo "An error has occured. Info about the error:"
 			grep ^text= ${LID_INFO} | cut -d= -f2
