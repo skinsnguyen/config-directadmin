@@ -27,7 +27,7 @@ NETMASK=255.255.255.255
 END
 
 ifup lo:100
-wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/getLicense.sh
+
 wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/setup.sh >/dev/null 2>&1
 wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/options.conf >/dev/null 2>&1
 wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/directadmin.conf >/dev/null 2>&1
@@ -42,8 +42,7 @@ cp options.conf /usr/local/directadmin/custombuild/
 
 rm -f /usr/local/directadmin/conf/directadmin.conf
 cp directadmin.conf /usr/local/directadmin/conf/
-mv /usr/local/directadmin/scripts/getLicense.sh /usr/local/directadmin/scripts/getLicense.sh.bak
-cp getLicense.sh /usr/local/directadmin/scripts/
+
 
 /usr/bin/perl -pi -e 's/^ethernet_dev=.*/ethernet_dev=lo:100/' /usr/local/directadmin/conf/directadmin.conf
 
