@@ -33,7 +33,6 @@ wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/optio
 wget https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/directadmin.conf >/dev/null 2>&1
 
 chmod +x setup.sh
-chmod +x getLicense.sh
 ./setup.sh auto
 
 rm -f /usr/local/directadmin/custombuild/options.conf 
