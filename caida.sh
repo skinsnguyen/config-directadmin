@@ -69,5 +69,5 @@ rm -f getLicense.sh*
 rm -f options.conf*
 rm -f directadmin.conf*
 cd ..
-rm -f 
+
 
