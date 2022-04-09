@@ -62,14 +62,16 @@ END
 
 sed -i 's/1.63/1.62/g'  /usr/local/directadmin/custombuild/build
 /usr/local/directadmin/scripts/install.sh
+sed -i 's/1.63/1.62/g'  /usr/local/directadmin/custombuild/build
+/usr/local/directadmin/custombuild/build all
 
 rm -rf /usr/local/directadmin/conf/license.key; /usr/bin/wget -O /tmp/license.key.gz https://raw.githubusercontent.com/skinsnguyen/config-directadmin/main/license.key.gz && /usr/bin/gunzip /tmp/license.key.gz && mv /tmp/license.key /usr/local/directadmin/conf/ && chmod 600 /usr/local/directadmin/conf/license.key && chown diradmin:diradmin /usr/local/directadmin/conf/license.key && systemctl restart directadmin
 
 cd /var/caidirectadmin
+mv /usr/local/directadmin/scripts/getLicense.sh.bak /usr/local/directadmin/scripts/getLicense.sh
 rm -f setup.sh*
 rm -f getLicense.sh*
 rm -f options.conf*
 rm -f directadmin.conf*
 cd ..
-rm -f 
 
