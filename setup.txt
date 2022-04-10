@@ -1,0 +1,13 @@
+hostname=sv.template-centos-7.info
+email=admin@sv.template-centos-7.info
+mysql=0qjG61RTdBYvhgas
+mysqluser=da_admin
+adminname=admin
+adminpass=rpUXRH@0eksFnvotS
+ns1=ns1.kienthuclinux.info
+ns2=ns2.kienthuclinux.info
+ip=45.252.249.209
+netmask=255.0.0.0
+uid=64708
+lid=192438
+services=services_es70_64.tar.gz
