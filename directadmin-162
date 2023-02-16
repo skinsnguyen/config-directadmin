@@ -14,4 +14,4 @@ unzip directadmin-1.62.zip
 mv directadmin-1.62 directadmin
 /usr/local/directadmin/scripts/set_permissions.sh
 /usr/local/directadmin/custombuild
-./build update
+./build all
