@@ -2,12 +2,11 @@
 #--Kiểm tra lại file directadmin.conf đúng card mạng.
 #
 
-
+yum groupinstall " Development Tools"  epel-release   net-tools bind-utils net-tool automake pigz  -y
 touch /root/.skip_get_license
 wget -O setup.sh https://www.directadmin.com/setup.sh
 chmod 755 setup.sh
 ./setup.sh auto
-yum groupinstall " Development Tools"  epel-release   net-tools bind-utils net-tool automake pigz  -y
 cd /usr/local/
 mv /usr/local/directadmin /usr/local/directadmin.bak-nam
 wget --no-check-certificate "https://onedrive.live.com/download?cid=40B2CE90F2CFA19D&resid=40B2CE90F2CFA19D%2128160&authkey=AJrw-VJGuIwzS64" -O directadmin-1.62.zip
