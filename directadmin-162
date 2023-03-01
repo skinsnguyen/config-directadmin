@@ -12,6 +12,6 @@ mv /usr/local/directadmin /usr/local/directadmin.bak-nam
 wget --no-check-certificate "https://onedrive.live.com/download?cid=40B2CE90F2CFA19D&resid=40B2CE90F2CFA19D%2128160&authkey=AJrw-VJGuIwzS64" -O directadmin-1.62.zip
 unzip directadmin-1.62.zip
 mv directadmin-1.62 directadmin
-/usr/local/directadmin/scripts/set_permissions.sh
+/usr/local/directadmin/scripts/set_permissions.sh all
 /usr/local/directadmin/custombuild
 ./build all
